@@ -38,13 +38,13 @@ export const CustomNavbar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home" className={activeLink === 'home' ? 'active nav-link' : 'nav-link'}
-                                  onClick={() => updateActiveLink}>Home</Nav.Link>
-                        <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active nav-link' : 'nav-link'}
-                                  onClick={() => updateActiveLink}>Skills</Nav.Link>
+                        <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+                                  onClick={() => updateActiveLink('home')}>Home</Nav.Link>
+                        <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
+                                  onClick={() => updateActiveLink('skills')}>Skills</Nav.Link>
                         <Nav.Link href="#projects"
-                                  className={activeLink === 'projects' ? 'active nav-link' : 'nav-link'}
-                                  onClick={() => updateActiveLink}>Projects</Nav.Link>
+                                  className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
+                                  onClick={() => updateActiveLink('projects')}>Projects</Nav.Link>
                     </Nav>
                     <span className="navbar-text">
                     <div className="social-icon">
