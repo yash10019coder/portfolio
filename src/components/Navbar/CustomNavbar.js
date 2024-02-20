@@ -1,11 +1,12 @@
-import React, {useEffect} from 'react';
-import {Navbar, Nav} from 'react-bootstrap';
-import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import React, {useEffect, useState} from 'react';
+import {Navbar, Nav, Container} from 'react-bootstrap';
+import logo from '../../assets/img/logo.svg';
+import navIcon1 from '../../assets/img/nav-icon1.svg';
+import navIcon2 from '../../assets/img/nav-icon2.svg';
+import navIcon3 from '../../assets/img/nav-icon3.svg';
+import './Navbar.css';
 
-export const NavBar = () => {
+export const CustomNavbar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
@@ -35,7 +36,7 @@ export const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
-                <Navbar.Colloapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active nav-link' : 'nav-link'}
                                   onClick={() => updateActiveLink}>Home</Nav.Link>
@@ -55,7 +56,7 @@ export const NavBar = () => {
                         console.log('connect')
                     }}><span>Connect</span></button>
                 </span>
-                </Navbar.Colloapse>
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     )
